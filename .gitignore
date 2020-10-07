@@ -1,0 +1,14 @@
+#hidden without .gitignore 
+.*
+!/.gitignore
+
+
+#folders
+venv
+__pycache__
+.vscode
+
+#files
+*.sqlite3
+000*_*
+
