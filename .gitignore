@@ -11,4 +11,5 @@ __pycache__
 #files
 *.sqlite3
 000*_*
+teste.py
 
