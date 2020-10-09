@@ -1,7 +1,4 @@
 
-import forca
-import adiviacao
-
 
 def menu():
 
