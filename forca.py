@@ -4,17 +4,14 @@ def jogar():
     print("***************************")
 
     palavra_secreta = input("\n Digite a palavra secreta: ").strip().upper()
+    letras_acertada = ["_" for letra in palavra_secreta]
 
-    conta_letras = len(palavra_secreta)
-    letras_acertada = list(conta_letras * '_')
     erros = 0
-    acertou = False
-    enforcou = False
 
-    print(f"\n \n Você pode errar {conta_letras} vezes.")
+    print(f"\n \n Você pode errar {len(palavra_secreta)} vezes.")
     print(f" \n \n Forca  = >  {letras_acertada}  \n \n ")
 
-    while (not acertou and not enforcou):
+    while ("atila" != "camila"):
 
         chute = input("Qual letra?").strip().upper()
 
@@ -31,11 +28,17 @@ def jogar():
 
         else:
             erros += 1
-            print(f"Total de erros {erros}/{conta_letras}")
+            print(f"Total de erros {erros}/{len(palavra_secreta)}")
 
         # teste do while
-        enforcou = erros == conta_letras
-        acertou = "_" not in letras_acertada
+        if (erros == len(palavra_secreta)):
+            print("Você perdeu !!!")
+            break
+
+        if ("_" not in letras_acertada):
+            print(f" \n \n Forca  = >  {letras_acertada}  \n \n ")
+            print("Você ganhou!!!")
+            break
 
     print("Fim do jogo")
 
